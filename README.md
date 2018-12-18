@@ -1,4 +1,6 @@
 # Design Patterns
+Examples of the Design Patterns in C++
 
 ## Creational
-[Singleton](https://en.wikipedia.org/wiki/Singleton_pattern)
+[Singleton](Creational/Singleton)
+Ensure a class has only one instance, and provide a global point of access to it.
