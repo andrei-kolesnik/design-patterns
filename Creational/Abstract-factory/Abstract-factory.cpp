@@ -13,68 +13,102 @@ using namespace std;
 
 // Abstract base database;
 // should define the inteface that is common and sufficiant for all the database types
-class IDatabase {
+class IBrand {
 public:
-	virtual string GetDbConnectionString() = 0;
+	virtual int getPrice() = 0;
+	virtual string getMateruial() = 0;
 };
 
-// Concrete database 1
-class MsSqlDatabase : public IDatabase {
+// Concrete brand 1
+class GucciBrand : public IBrand {
 public:
-	string GetDbConnectionString() {
-		return "MS SQL";
-	}
+	virtual int getPrice() { return 1000; }
+	virtual string getMateruial() { return "Crocodile skin"; }
 };
 
-// Concrete database 2
-class OracleDatabase : public IDatabase {
+// Concrete brand 2
+class PucciBrand : public IBrand {
 public:
-	string GetDbConnectionString() {
-		return "Oracle";
+	virtual int getPrice() { 
+		GucciBrand gucci;
+		return gucci.getPrice() / 3;
 	}
+	virtual string getMateruial() { return "Plastic"; }
+};
+
+// Abstract product 1
+class IBag {
+	virtual string getMaterial() = 0;
+};
+
+// Abstract product 2
+class IShoes {
+	virtual int getPrice() = 0;
+};
+
+// Concrete product 1
+class Bag : public IBag {
+private:
+	IBrand* brand;
+public:
+	Bag(IBrand* _brand) : brand(_brand) {}
+	virtual string getMaterial() { return brand->getMateruial(); }
+};
+
+// Concrete product 2
+class Shoes : public IShoes {
+private:
+	IBrand* brand;
+public:
+	Shoes(IBrand* _brand) : brand(_brand) {}
+	virtual int getPrice() { return brand->getPrice(); }
 };
 
 // Abstract factory
-// defines the method to create a database
-class IDatabaseFactory {
+// defines the method to create abstract products
+class IBrandFactory {
 public:
-	virtual IDatabase* CreateDatabase() = 0;
+	virtual IBag* CreateBag() = 0;
+	virtual IShoes* CreateShoes() = 0;
 };
 
 // Concrete factory 1
-// creates database 1
-class MsSqlDatabaseFactory : public IDatabaseFactory {
+// creates brand 1 products
+class GucciFactory : public IBrandFactory {
 public:
-	IDatabase* CreateDatabase() {
-		return new MsSqlDatabase;
-	}
+	virtual IBag* CreateBag() { return new Bag(new GucciBrand); }
+	virtual IShoes* CreateShoes() { return new Shoes(new GucciBrand); }
 };
 
 // Concrete factory 2
-// creates database 2
-class OracleDatabaseFactory : public IDatabaseFactory {
+// creates brand 2 products
+class PucciFactory : public IBrandFactory {
 public:
-	IDatabase* CreateDatabase() {
-		return new OracleDatabase;
+	virtual IBag* CreateBag() { return new Bag(new PucciBrand); }
+	virtual IShoes* CreateShoes() { return new Shoes(new PucciBrand); }
+};
+
+class Shop {
+public:
+	string name;
+	Bag* bag;
+	Shoes* shoes;
+	Shop(string _name, IBrandFactory* factory) : name(_name) {
+		bag = (Bag*)factory->CreateBag();
+		shoes = (Shoes*)factory->CreateShoes();
 	}
 };
 
-enum DbType { MSSQL, Oracle};
-
 int main()
 {
-	IDatabaseFactory* DbFactory;
-	DbType type = MSSQL;
-	// the switch statement is only needed once when creating the concrete factory
-	switch (type)
-	{
-	case MSSQL: DbFactory = new MsSqlDatabaseFactory; break;
-	case Oracle: DbFactory = new OracleDatabaseFactory; break;
-	default: return -1;
-	}
-	IDatabase* Database = DbFactory->CreateDatabase();
-	// we will work with the database through its abstract interface
-	cout << Database->GetDbConnectionString() << endl;
+	Shop shop1("Macy's", new GucciFactory);
+	cout << "At " << shop1.name << ", I bought a bag which was made from " << shop1.bag->getMaterial() << 
+		" and some shoes which costed " << shop1.shoes->getPrice() << endl;
+
+	Shop shop2("Street market", new PucciFactory);
+	cout << "At " << shop2.name << ", I bought a bag which was made from " << shop2.bag->getMaterial() << 
+		" and some shoes which costed " << shop2.shoes->getPrice() << endl;
+
 	system("pause");
 	return 0;
 }
