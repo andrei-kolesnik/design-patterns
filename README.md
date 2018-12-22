@@ -7,3 +7,8 @@ Examples of the [Design Patterns](https://en.wikipedia.org/wiki/Software_design_
 |[Abstract Factory](https://en.wikipedia.org/wiki/Abstract_factory_pattern)|Provide an interface for creating families of related or dependent objects without specifying their concrete classes.|[C++](Creational/Abstract-factory) [Delphi](Creational/Abstract-factory/Delphi)|
 |[Factory Method](https://en.wikipedia.org/wiki/Factory_method_pattern)|Define an interface for creating a single object, but let subclasses decide which class to instantiate.|[C++](Creational/Factory-method) |
 |[Singleton](https://en.wikipedia.org/wiki/Singleton_patternn)|Ensure a class has only one instance, and provide a global point of access to it.|[C++](Creational/Singleton) [Delphi](Creational/Singleton/Delphi) |
+
+## Behavioral
+| Pattern | Description | Source Code |
+| :--- | :--- | :---: |
+|[Strategy](https://en.wikipedia.org/wiki/Strategy_pattern)|Define a family of algorithms, encapsulate each one, and make them interchangeable.|[C++](Behavioral/Strategy)|
