@@ -11,6 +11,5 @@ Examples of the [Design Patterns](https://en.wikipedia.org/wiki/Software_design_
 ## Behavioral
 | Pattern | Description | Source Code |
 | :--- | :--- | :---: |
-
 |[Observer](https://en.wikipedia.org/wiki/Observer_pattern)|Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.|[C++](Behavioral/Observer)|
 |[Strategy](https://en.wikipedia.org/wiki/Strategy_pattern)|Define a family of algorithms, encapsulate each one, and make them interchangeable.|[C++](Behavioral/Strategy)|
