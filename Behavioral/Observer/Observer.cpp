@@ -12,7 +12,7 @@ using namespace std;
 // Abstract observer / subscriber
 class IObserver {
 public:
-	virtual void Update() = 0;
+	virtual void Update() = 0; //this is for the "pull" behaviour; "push" will send some data with the updates
 };
 
 // Abstract observable publisher
@@ -27,6 +27,7 @@ public:
 class Subject : public ISubject {
 private:
 	vector<IObserver*> observers;
+	int state;
 public:
 	virtual void Register(IObserver* newObserver) {
 		observers.push_back(newObserver);
@@ -38,16 +39,23 @@ public:
 
 	virtual void Notify() {
 		for (auto observer : observers)
-			observer->Update();
+			observer->Update(/*push some data*/); // "push" behaviour will need to pass some data as parameters
 	}
+
+	void setState(int newState) { 
+		state = newState;  
+		Notify();
+	}
+
+	int getState() { return state; } // method for the "pull" observers
 };
 
 // Concrete observer
 class Observer : public IObserver {
 private:
-	ISubject* subject;
+	Subject* subject;
 public:
-	Observer(ISubject* _subject) : subject(_subject) {
+	Observer(Subject* _subject) : subject(_subject) {
 		subject->Register(this);
 	}
 
@@ -56,13 +64,13 @@ public:
 	}
 
 	void Update() {
-		cout << "Change happened" << endl;
+		cout << "Change happened, new state is " << subject->getState() << endl;
 	}
 };
 
 int main() {
 	Subject subject;
 	Observer observer1(&subject), observer2(&subject);
-	subject.Notify();
+	subject.setState(42);
 	getchar();
 }
