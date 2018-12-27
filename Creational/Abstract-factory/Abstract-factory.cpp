@@ -101,13 +101,15 @@ public:
 
 int main()
 {
-	Shop shop1("Macy's", new GucciFactory);
-	cout << "At " << shop1.name << ", I bought a bag which was made from " << shop1.bag->getMaterial() << 
-		" and some shoes which costed " << shop1.shoes->getPrice() << endl;
+	bool IAmRich = false;
+	Shop* shop;
 
-	Shop shop2("Street market", new PucciFactory);
-	cout << "At " << shop2.name << ", I bought a bag which was made from " << shop2.bag->getMaterial() << 
-		" and some shoes which costed " << shop2.shoes->getPrice() << endl;
+	if (IAmRich)
+		shop = new Shop("Macy's", new GucciFactory);
+	else
+		shop = new Shop("Street market", new PucciFactory);
+
+	cout << "At " << shop->name << ", I bought a " << shop->bag->getMaterial() << " bag and some shoes for $" << shop->shoes->getPrice() << endl;
 
 	system("pause");
 	return 0;
