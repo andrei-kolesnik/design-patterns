@@ -34,6 +34,7 @@ public:
 	}
 };
 
+// Abstract decorator
 class BaseDecorator : public IComponent {
 public:
 	IComponent* component{ nullptr };
