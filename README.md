@@ -11,6 +11,7 @@ Examples of the [Design Patterns](https://en.wikipedia.org/wiki/Software_design_
 ## Behavioral
 | Pattern | Description | Source Code |
 | :--- | :--- | :---: |
+|[Command](https://en.wikipedia.org/wiki/Command_pattern)|Encapsulate a request as an object, thereby allowing for the parameterization of clients with different requests, and the queuing or logging of requests.|[C++](Behavioral/Command)|
 |[Observer](https://en.wikipedia.org/wiki/Observer_pattern)|Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.|[C++](Behavioral/Observer)|
 |[Strategy](https://en.wikipedia.org/wiki/Strategy_pattern)|Define a family of algorithms, encapsulate each one, and make them interchangeable.|[C++](Behavioral/Strategy)|
 
