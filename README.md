@@ -19,4 +19,5 @@ Examples of the [Design Patterns](https://en.wikipedia.org/wiki/Software_design_
 ## Structural
 | Pattern | Description | Source Code |
 | :--- | :--- | :---: |
+|[Adapter](https://en.wikipedia.org/wiki/Adapter_pattern)|Convert the interface of a class into another interface clients expect.|[C++](Structural/Adapter)|
 |[Decorator](https://en.wikipedia.org/wiki/Decorator_pattern)|Attach additional responsibilities to an object dynamically keeping the same interface.|[C++](Structural/Decorator)|
