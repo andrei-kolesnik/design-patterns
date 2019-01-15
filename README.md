@@ -22,3 +22,4 @@ Examples of the [Design Patterns](https://en.wikipedia.org/wiki/Software_design_
 |[Adapter](https://en.wikipedia.org/wiki/Adapter_pattern)|Convert the interface of a class into another interface clients expect.|[C++](Structural/Adapter)|
 |[Decorator](https://en.wikipedia.org/wiki/Decorator_pattern)|Attach additional responsibilities to an object dynamically keeping the same interface.|[C++](Structural/Decorator)|
 |[Facade](https://en.wikipedia.org/wiki/Facade_pattern)|Provide a unified interface to a set of interfaces in a subsystem.|[C++](Structural/Facade)|
+|[Proxy](https://en.wikipedia.org/wiki/Proxy_pattern)|Provide a surrogate or placeholder for another object to control access to it.|[C++](Structural/Proxy)|
