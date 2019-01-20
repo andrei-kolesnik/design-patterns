@@ -28,7 +28,7 @@ Examples of the [Design Patterns](https://en.wikipedia.org/wiki/Software_design_
 
 | Principle | Description | Source Code |
 | :--- | :--- | :---: |
-|[Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)|A class should have only a single responsibility (reason to change)|  |
+|[Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)|A class should have only a single responsibility (reason to change)|[[C++]](SOLID/Single-Responsibility-Principle)|
 |[Open/closed principle](https://en.wikipedia.org/wiki/Open/closed_principle)|Classes should be open for extension, but closed for modification|  |
 |[Liskov's Substitution Principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)|Derived classes must be substitutable for their base classes|[C++](SOLID/Liskov-Substitution-Principle)|
 |[Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle)|Many client-specific interfaces are better than one general-purpose interface|  |
