@@ -23,3 +23,13 @@ Examples of the [Design Patterns](https://en.wikipedia.org/wiki/Software_design_
 |[Decorator](https://en.wikipedia.org/wiki/Decorator_pattern)|Attach additional responsibilities to an object dynamically keeping the same interface.|[C++](Structural/Decorator)|
 |[Facade](https://en.wikipedia.org/wiki/Facade_pattern)|Provide a unified interface to a set of interfaces in a subsystem.|[C++](Structural/Facade)|
 |[Proxy](https://en.wikipedia.org/wiki/Proxy_pattern)|Provide a surrogate or placeholder for another object to control access to it.|[C++](Structural/Proxy)|
+
+# [SOLID](https://en.wikipedia.org/wiki/SOLID) principles of object-oriented programming
+
+| Principle | Description | Source Code |
+| :--- | :--- | :---: |
+|[Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)|A class should have only a single responsibility (reason to change)|  |
+|[Open/closed principle](https://en.wikipedia.org/wiki/Open/closed_principle)|Classes should be open for extension, but closed for modification|  |
+|[Liskov's Substitution Principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)|Derived classes must be substitutable for their base classes|[C++](SOLID/Liskov-Substitution-Principle)|
+|[Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle)|Many client-specific interfaces are better than one general-purpose interface|  |
+|[Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)|Depend upon abstractions, not concretions|  |
