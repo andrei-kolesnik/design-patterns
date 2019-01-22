@@ -34,4 +34,4 @@
 |[Open/closed principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)|Classes should be open for extension, but closed for modification|[C++](SOLID/Open-Closed-Principle)|
 |[Liskov's Substitution Principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)|Derived classes must be substitutable for their base classes|[C++](SOLID/Liskov-Substitution-Principle)|
 |[Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle)|Many client-specific interfaces are better than one general-purpose interface|[C++](SOLID/Interface-Segregation-Principle)|
-|[Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)|Depend upon abstractions, not concretions|  |
+|[Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)|Depend upon abstractions, not concretions|[C++](SOLID/Dependency-Inversion-Principle)|
