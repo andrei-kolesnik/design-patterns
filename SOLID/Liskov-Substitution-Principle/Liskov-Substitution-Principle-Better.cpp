@@ -28,7 +28,7 @@ public:
 	virtual void makeSound() { cout << "Quack!" << endl; }
 };
 
-class Ostrich : public IMakeSound {
+class Ostrich : public Bird, public IMakeSound {
 public:
 	virtual void makeSound() { cout << "Chirp!" << endl; }
 };
