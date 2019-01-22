@@ -7,7 +7,6 @@ The code that doesn’t have to be changed every time the requirements change.
 #include <iostream>
 #include <string>
 #include <vector>
-#include <typeinfo>
 #define _USE_MATH_DEFINES
 #include <math.h>
 using namespace std;
