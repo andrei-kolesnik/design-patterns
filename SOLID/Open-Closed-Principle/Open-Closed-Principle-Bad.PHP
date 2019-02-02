@@ -1,4 +1,10 @@
 <?php
+/*
+Open/closed principle
+https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle
+Classes should be open for extension, but closed for modification.
+The code that doesn’t have to be changed every time the requirements change.
+*/
 class Shape {
     public $name;
     function __construct($name) { $this->name = $name; }
