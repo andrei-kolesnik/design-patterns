@@ -22,7 +22,7 @@ public:
 
 class Ostrich : public Bird {
 public:
-	virtual void fly() { throw exception("Cant's fly!"); }
+	virtual void fly() { throw exception("Can't fly!"); }
 	virtual void makeSound() { cout << "Chirp!" << endl; }
 };
 
