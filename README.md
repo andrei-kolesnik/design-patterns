@@ -15,6 +15,10 @@
 |[Observer](https://en.wikipedia.org/wiki/Observer_pattern)|Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.|[C++](Behavioral/Observer)|
 |[Strategy](https://en.wikipedia.org/wiki/Strategy_pattern)|Define a family of algorithms, encapsulate each one, and make them interchangeable.|[C++](Behavioral/Strategy)|
 
+<!--
+|[Template](https://en.wikipedia.org/wiki/Template_method_pattern)|Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.|[C++](Behavioral/Strategy)|
+-->
+
 ## Structural
 | Pattern | Description | Source Code |
 | :--- | :--- | :---: |
@@ -31,7 +35,7 @@
 | Principle | Description | Source Code |
 | :--- | :--- | :---: |
 |[Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)|A class should have only a single responsibility (reason to change)|[C++](SOLID/Single-Responsibility-Principle)|
-|[Open/closed principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)|Classes should be open for extension, but closed for modification|[C++](SOLID/Open-Closed-Principle)|
+|[Open/closed principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle)|Classes should be open for extension, but closed for modification|[C++<br/> PHP](SOLID/Open-Closed-Principle)|
 |[Liskov's Substitution Principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle)|Derived classes must be substitutable for their base classes|[C++](SOLID/Liskov-Substitution-Principle)|
 |[Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle)|Many client-specific interfaces are better than one general-purpose interface|[C++](SOLID/Interface-Segregation-Principle)|
 |[Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle)|Depend upon abstractions, not concretions|[C++](SOLID/Dependency-Inversion-Principle)|
