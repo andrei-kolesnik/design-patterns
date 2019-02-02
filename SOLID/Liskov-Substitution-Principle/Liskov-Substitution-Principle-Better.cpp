@@ -8,7 +8,7 @@ Derived classes must be substitutable for their base classes
 #include <vector>
 using namespace std;
 
-// Good:
+// Better:
 class IFly {
 public:
 	virtual void fly() = 0;

@@ -34,8 +34,8 @@ int main() {
 
 	for (auto bird : Flock)
 	{
-		bird->fly();
-		bird->makeSound(); // there be exceptions!
+		bird->fly(); // there be exceptions!
+		bird->makeSound(); 
 	}
 
 	system("pause");
