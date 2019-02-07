@@ -24,6 +24,7 @@
 | :--- | :--- | :---: |
 |[Adapter](https://en.wikipedia.org/wiki/Adapter_pattern)|Convert the interface of a class into another interface clients expect.|[C++](Structural/Adapter)|
 |[Bridge](https://en.wikipedia.org/wiki/Bridge_pattern)|Decouple an abstraction from its implementation allowing the two to vary independently.|[C++](Structural/Bridge)|
+|[Composite](https://en.wikipedia.org/wiki/Composite_pattern)|Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.|[PHP](Structural/Composite)|
 |[Decorator](https://en.wikipedia.org/wiki/Decorator_pattern)|Attach additional responsibilities to an object dynamically keeping the same interface.|[C++](Structural/Decorator)|
 |[Facade](https://en.wikipedia.org/wiki/Facade_pattern)|Provide a unified interface to a set of interfaces in a subsystem.|[C++](Structural/Facade)|
 |[Proxy](https://en.wikipedia.org/wiki/Proxy_pattern)|Provide a surrogate or placeholder for another object to control access to it.|[C++](Structural/Proxy)|
