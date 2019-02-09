@@ -14,6 +14,7 @@
 |[Command](https://en.wikipedia.org/wiki/Command_pattern)|Encapsulate a request as an object, thereby allowing for the parameterization of clients with different requests, and the queuing or logging of requests.|[C++](Behavioral/Command)|
 |[Iterator](https://en.wikipedia.org/wiki/Iterator_pattern)|Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.|[PHP](Behavioral/Iterator)|
 |[Observer](https://en.wikipedia.org/wiki/Observer_pattern)|Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.|[C++](Behavioral/Observer)|
+|[State](https://en.wikipedia.org/wiki/State_pattern)|Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.|[PHP](Behavioral/State)|
 |[Strategy](https://en.wikipedia.org/wiki/Strategy_pattern)|Define a family of algorithms, encapsulate each one, and make them interchangeable.|[C++](Behavioral/Strategy)|
 
 <!--
