@@ -16,6 +16,7 @@
 |[Observer](https://en.wikipedia.org/wiki/Observer_pattern)|Define a one-to-many dependency between objects where a state change in one object results in all its dependents being notified and updated automatically.|[C++](Behavioral/Observer)|
 |[State](https://en.wikipedia.org/wiki/State_pattern)|Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.|[PHP](Behavioral/State)|
 |[Strategy](https://en.wikipedia.org/wiki/Strategy_pattern)|Define a family of algorithms, encapsulate each one, and make them interchangeable.|[C++](Behavioral/Strategy)|
+|[Visitor](https://en.wikipedia.org/wiki/Visitor_pattern)|Represent an operation to be performed on the elements of an object structure. |[C++](Behavioral/Visitor)|
 
 <!--
 |[Template](https://en.wikipedia.org/wiki/Template_method_pattern)|Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.|[C++](Behavioral/Strategy)|
