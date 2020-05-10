@@ -8,7 +8,7 @@ https://en.wikipedia.org/wiki/Visitor_pattern
 #include <vector>
 using namespace std;
 
-class IVisitor; // Forward declaration of abstract Visitor
+class IVisitor; // Forward declaration of the abstract Visitor
 
 // Abstract Visitable: parent class for applications
 class IVisitable {
@@ -22,9 +22,14 @@ public:
 	string getName() {
 		return name;
 	}
+	void display() {
+		cout << name << ": price is " << price << endl;
+	}
+	// Accepts any IVisitor
 	virtual void accept(IVisitor&) = 0;
 };
 
+// Forward declarations of the concrete applications
 class FreeApplication;
 class ProApplication;
 class EnterpriseApplication;
@@ -34,12 +39,13 @@ class IVisitor {
 protected:
 	string name;
 public:
+	void display(string appName, int appPrice) {
+		cout << name << ": " << appName << " price is " << appPrice << endl;
+	}
+	// Overloads for all kinds of IVisitable
 	virtual void visit(FreeApplication&) = 0;
 	virtual void visit(ProApplication&) = 0;
 	virtual void visit(EnterpriseApplication&) = 0;
-	void advertise(string appName, int appPrice) {
-		cout << name << ": " << appName << " price is " << appPrice << endl;
-	}
 };
 
 // Concrete Visitable #1	
@@ -85,16 +91,15 @@ public:
 		name = "Signup Offer";
 	}
 	void visit(FreeApplication& app) {
-		advertise(app.getName(), app.getPrice());
+		display(app.getName(), app.getPrice());
 	}
 	void visit(ProApplication& app) {		
-		advertise(app.getName(), app.getPrice() - 2);
+		display(app.getName(), app.getPrice() - 2);
 	}
 	void visit(EnterpriseApplication& app) {
-		advertise(app.getName(), app.getPrice() / 10 * 8);
+		display(app.getName(), app.getPrice() / 10 * 8);
 	}
 };
-
 
 // Concrete Visitor #2
 class SaleOffer : public IVisitor {
@@ -103,13 +108,13 @@ public:
 		name = "Holiday Sale";
 	}
 	void visit(FreeApplication& app) {
-		advertise(app.getName(), app.getPrice());
+		display(app.getName(), app.getPrice());
 	}
 	void visit(ProApplication& app) {
-		advertise(app.getName(), app.getPrice() - 5);
+		display(app.getName(), app.getPrice() - 5);
 	}
 	void visit(EnterpriseApplication& app) {
-		advertise(app.getName(), app.getPrice() / 2);
+		display(app.getName(), app.getPrice() / 2);
 	}
 };
 
@@ -120,7 +125,11 @@ int main() {
 
 	SignupOffer signup;
 	SaleOffer sale;
-	
+
+	freeApp.display();
+	proApp.display();
+	entApp.display();
+
 	signup.visit(freeApp);
 	signup.visit(proApp);
 	signup.visit(entApp);
