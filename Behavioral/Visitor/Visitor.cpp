@@ -130,13 +130,13 @@ int main() {
 	proApp.display();
 	entApp.display();
 
-	signup.visit(freeApp);
-	signup.visit(proApp);
-	signup.visit(entApp);
+	freeApp.accept(signup);
+	proApp.accept(signup);
+	entApp.accept(signup);
 
-	sale.visit(freeApp);
-	sale.visit(proApp);
-	sale.visit(entApp);
+	freeApp.accept(sale);
+	proApp.accept(sale);
+	entApp.accept(sale);
 
 	getchar();
 }
